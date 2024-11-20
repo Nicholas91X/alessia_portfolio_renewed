@@ -182,6 +182,102 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Inizializza entrambi i canvas
     initializeRippleCanvas("ripple-canvas");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Funzione per inizializzare il canvas con effetto onda
+    function initializeRippleCanvas(canvasId) {
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext("2d");
+
+        // Configura le dimensioni del canvas
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+        resizeCanvas(); // Imposta le dimensioni iniziali
+        window.addEventListener("resize", resizeCanvas); // Aggiorna al ridimensionamento
+
+        // Variabili per gestire le onde
+        const ripples = [];
+        const damping = 0.96; // Riduzione dell'effetto
+        const rippleSpeed = 2; // Velocità di propagazione
+
+        // Funzione per aggiungere un'onda
+        function createRipple(x, y) {
+            ripples.push({
+                x,
+                y,
+                radius: 0,
+                opacity: 1,
+            });
+        }
+
+        // Funzione per aggiornare e disegnare le onde
+        function drawRipples() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ripples.forEach((ripple, index) => {
+                // Disegna l'onda
+                ctx.beginPath();
+                ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+                ctx.strokeStyle = `rgba(255, 255, 255, ${ripple.opacity})`;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // Aggiorna le proprietà dell'onda
+                ripple.radius += rippleSpeed;
+                ripple.opacity *= damping;
+
+                // Rimuove l'onda se troppo trasparente
+                if (ripple.opacity < 0.01) {
+                    ripples.splice(index, 1);
+                }
+            });
+
+            requestAnimationFrame(drawRipples);
+        }
+
+        // Avvia l'animazione delle onde
+        drawRipples();
+
+        // Funzione per ottenere la posizione del tocco/mouse
+        function getPointerPosition(event) {
+            const rect = canvas.getBoundingClientRect();
+            let x, y;
+
+            if (event.touches && event.touches[0]) {
+                // Per dispositivi touch
+                x = event.touches[0].clientX - rect.left;
+                y = event.touches[0].clientY - rect.top;
+            } else {
+                // Per dispositivi desktop
+                x = event.clientX - rect.left;
+                y = event.clientY - rect.top;
+            }
+
+            return { x, y };
+        }
+
+        // Aggiungi un'onda al movimento del mouse o trascinamento del dito
+        canvas.addEventListener("mousemove", (e) => {
+            const { x, y } = getPointerPosition(e);
+            createRipple(x, y);
+        });
+
+        canvas.addEventListener("touchmove", (e) => {
+            e.preventDefault(); // Previene il comportamento di default del browser (es. scroll)
+            const { x, y } = getPointerPosition(e);
+            createRipple(x, y);
+        });
+
+        canvas.addEventListener("touchstart", (e) => {
+            const { x, y } = getPointerPosition(e);
+            createRipple(x, y);
+        });
+    }
+
+    // Inizializza il canvas con effetto onda per ripple-canvas-right
     initializeRippleCanvas("ripple-canvas-right");
 });
 
