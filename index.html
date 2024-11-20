@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alessia Amoruso</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <canvas id="ripple-canvas"></canvas>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section" id="home">
+            <div class="left-section-right">
+                <canvas id="ripple-canvas-right"></canvas>
+            </div>
+            <!-- Hamburger Menu -->
+            <div class="menu-container">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <!-- Fullscreen Navigation -->
+                <div class="menu-overlay" id="menu-overlay">
+                    <div class="menu">
+                        <div class="hamburger-close" id="hamburger-close">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="#home" class="menu-item active">Home</a>
+                        <a href="#portfolio" class="menu-item">Portfolio</a>
+                        <a href="#resume" class="menu-item">Resume</a>
+                        <a href="#blog" class="menu-item">Blog</a>
+                        <a href="#contact" class="menu-item">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile">
+                <img src="asset/Alessia-Amoruso.jpeg" alt="Alessia Amoruso Profile Avatar" class="profile-avatar">
+                <h1>I'm Alessia Amoruso</h1>
+                <p class="description">
+                    Passionate designer & developer who loves simplicity in things and crafts beautiful user interfaces
+                    with love.
+                </p>
+                <div class="buttons">
+                    <a href="cv.pdf" class="btn" download>Download CV</a>
+                    <a href="https://www.facebook.com" class="icon" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" class="icon" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" class="icon" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="info">
+                    <div class="first-column">
+                        <p><strong>From:</strong> Milan, Italy</p>
+                        <p><strong>Phone:</strong> <a href="tel:0987654321">098-765-4321</a></p>
+                    </div>
+                    <div class="second-column">
+                        <p><strong>Age:</strong> 28</p>
+                        <p><strong>Email:</strong> <a
+                                href="mailto:hello@alessiaamoruso.com">hello@alessiaamoruso.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Work Section -->
+            <div class="my-work" id="portfolio">
+                <h2>My Work</h2>
+                <div class="tabs">
+                    <button class="tab active" data-filter="all">All</button>
+                    <button class="tab" data-filter="slideshow">Slideshow</button>
+                    <button class="tab" data-filter="video">Video</button>
+                    <button class="tab" data-filter="image">Image</button>
+                </div>
+                <div class="work-gallery">
+                    <!-- Slideshow Items -->
+                    <div class="work-item slideshow">
+                        <img src="asset/Alessia-Amoruso.jpeg" alt="Work 1">
+                    </div>
+                    <div class="work-item slideshow">
+                        <img src="asset/Alessia-Amoruso-Digital.jpeg" alt="Work 2">
+                    </div>
+                    <!-- Video Items -->
+                    <div class="work-item video">
+                        <img src="asset/Alessia-Amoruso.jpeg" alt="Work 3">
+                    </div>
+                    <div class="work-item video">
+                        <img src="asset/Alessia-Amoruso-Digital.jpeg" alt="Work 4">
+                    </div>
+                    <!-- Image Items -->
+                    <div class="work-item video">
+                        <img src="asset/Alessia-Amoruso.jpeg" alt="Work 5">
+                    </div>
+                    <div class="work-item image">
+                        <img src="asset/Alessia-Amoruso-Digital.jpeg" alt="Work 6">
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Services Section -->
+            <div class="my-services">
+                <h2>My Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Graphic Design</h3>
+                        <p>Modern and mobile-ready websites that will help with your marketing.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Modern and mobile-ready websites that will help with your marketing.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Media Marketing</h3>
+                        <p>Modern and mobile-ready websites that will help with your marketing.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Advertising</h3>
+                        <p>Modern and mobile-ready websites that will help with your marketing.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Game Development</h3>
+                        <p>Modern and mobile-ready websites that will help with your marketing.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analytics</h3>
+                        <p>Modern and mobile-ready websites that will help with your marketing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parallax Section -->
+            <div class="parallax-section">
+                <div class="parallax-image">
+                    <div class="parallax-content">
+                        <h2>Let's work together!</h2>
+                        <a href="#" class="btn">Hire Me!</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-expertises" id="resume">
+                <h2>My Expertises</h2>
+                <div class="expertises-grid">
+                    <!-- My Experience -->
+                    <div class="expertise-section">
+                        <h3>My Experience</h3>
+                        <div class="expertise-card">
+                            <h4>Senior Architect</h4>
+                            <p><strong>2015 - Present | Google</strong></p>
+                            <p>Collaborate with creative and development teams on the execution of ideas.</p>
+                        </div>
+                        <div class="expertise-card">
+                            <h4>Front-end Developer</h4>
+                            <p><strong>2013 - 2015 | Facebook Inc.</strong></p>
+                            <p>Collaborate with creative and development teams on the execution of ideas.</p>
+                        </div>
+                        <div class="expertise-card">
+                            <h4>UI Developer</h4>
+                            <p><strong>2011 - 2013 | Envato</strong></p>
+                            <p>Collaborate with creative and development teams on the execution of ideas.</p>
+                        </div>
+                    </div>
+
+                    <!-- My Education -->
+                    <div class="expertise-section">
+                        <h3>My Education</h3>
+                        <div class="expertise-card">
+                            <h4>Master in Arts</h4>
+                            <p><strong>2006 - 2008</strong></p>
+                            <p>Collaborate with creative and development teams on the execution of ideas.</p>
+                        </div>
+                        <div class="expertise-card">
+                            <h4>Art University</h4>
+                            <p><strong>2004 - 2006</strong></p>
+                            <p>Collaborate with creative and development teams on the execution of ideas.</p>
+                        </div>
+                        <div class="expertise-card">
+                            <h4>Art University</h4>
+                            <p><strong>2002 - 2004</strong></p>
+                            <p>Collaborate with creative and development teams on the execution of ideas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <div class="design-skills">
+                    <h2>Design Skills</h2>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <span>Graphic Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Logo Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Graphic Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>Logo Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coding-skills">
+                    <h2>Coding Skills</h2>
+                    <div class="skill-container">
+                        <div class="skill">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-bar-fill" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parallax Section -->
+            <div class="parallax-section">
+                <div class="parallax-image">
+                    <div class="parallax-content">
+                        <h2>Let's work together!</h2>
+                        <a href="#" class="btn">Hire Me!</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Section -->
+            <div class="blog-section" id="blog">
+                <h2>Blog</h2>
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <div class="blog-card">
+                        <img src="asset/Alessia-Amoruso-Digital.jpeg" alt="Blog Post 1">
+                        <div class="blog-content">
+                            <h3>10 tips for drawing with coloured pencils</h3>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="blog-card">
+                        <img src="asset/Alessia-Amoruso.jpeg" alt="Blog Post 2">
+                        <div class="blog-content">
+                            <h3>The single greatest gift to get your friend who always travels</h3>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                    <!-- Blog Post 3 -->
+                    <div class="blog-card">
+                        <img src="asset/Alessia-Amoruso-Digital.jpeg" alt="Blog Post 3">
+                        <div class="blog-content">
+                            <h3>Why all women should eat alone</h3>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                    <!-- Blog Post 4 -->
+                    <div class="blog-card">
+                        <img src="asset/Alessia-Amoruso.jpeg" alt="Blog Post 4">
+                        <div class="blog-content">
+                            <h3>The single greatest gift to get your friend who always travels</h3>
+                            <p>Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn">&lt;</button>
+                    <button class="pagination-btn">&gt;</button>
+                </div>
+            </div>
+            <!-- Contact Section -->
+            <div class="contact-section" id="contact">
+                <h2>Contact</h2>
+
+                <!-- My Location -->
+                <div class="location">
+                    <h3>My Location</h3>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8587743752646!2d-122.41941558468194!3d37.77492927975853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808581a60b8e7fcd%3A0x2e73870d1ecf547!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sit!4v1692975651081!5m2!1sen!2sit"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Get in Touch Section -->
+                <div class="get-in-touch">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+9876543210">+987 654 3210</a>
+                            <p>Call Us</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:hello@beinggeorge.com">hello@beinggeorge.com</a>
+                            <p>Email Us</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <h3>Contact Form</h3>
+                        <form>
+                            <div class="form-row">
+                                <input type="text" placeholder="Your Name*" required>
+                                <input type="email" placeholder="Your Email*" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" placeholder="Your Subject">
+                            </div>
+                            <div class="form-row">
+                                <textarea placeholder="Your message..." rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
