@@ -847,13 +847,17 @@ button.btn:hover {
 /* Responsivo per tablet (768px) */
 @media (max-width: 768px) {
     .left-section {
-        max-height: 40vh; /* Limita l'altezza della sezione sinistra */
-        overflow: hidden; /* Evita overflow */
+        max-height: 40vh;
+        /* Limita l'altezza della sezione sinistra */
+        overflow: hidden;
+        /* Evita overflow */
     }
 
     .right-section {
-        max-height: 60vh; /* Limita l'altezza della sezione destra */
-        overflow-y: auto; /* Permetti lo scroll */
+        max-height: 60vh;
+        /* Limita l'altezza della sezione destra */
+        overflow-y: auto;
+        /* Permetti lo scroll */
     }
 
     .tabs {
@@ -896,11 +900,12 @@ button.btn:hover {
         flex-direction: column;
     }
 
-    .form-row input{
+    .form-row input {
         width: 100%;
     }
 
-    .first-column, .second-column {
+    .first-column,
+    .second-column {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1008,25 +1013,68 @@ button.btn:hover {
         align-items: flex-start;
         justify-content: center;
     }
+
+    .blog-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        /* Abilita lo scorrimento orizzontale */
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+        /* Scorrimento fluido sugli articoli */
+        -webkit-overflow-scrolling: touch;
+        /* Per un’esperienza di scorrimento fluida su iOS */
+    }
+
+    .blog-card {
+        flex: 0 0 90%;
+        /* Mostra un articolo alla volta con margini */
+        scroll-snap-align: center;
+        /* Centra l'articolo visibile */
+    }
+
+    /* Nasconde la barra di scorrimento su diversi browser */
+    .blog-grid::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari e Edge */
+    }
+
+    .blog-grid {
+        -ms-overflow-style: none;
+        /* Internet Explorer e Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .pagination {
+        display: none;
+        /* Nascondi la paginazione per i dispositivi mobili */
+    }
 }
 
 @media (max-width: 1200px) {
     .left-section {
-        display: none; /* Nasconde la sezione sinistra */
+        display: none;
+        /* Nasconde la sezione sinistra */
     }
 
     .left-section-right {
-        display: block; /* Mostra la sezione "trasferita" nella destra */
+        display: block;
+        /* Mostra la sezione "trasferita" nella destra */
         width: 100%;
-        height: 300px; /* Imposta un'altezza fissa o automatica */
-        position: relative; /* Per scrollare con il contenuto */
+        height: 300px;
+        /* Imposta un'altezza fissa o automatica */
+        position: relative;
+        /* Per scrollare con il contenuto */
         background: url(asset/Alessia-Amoruso-Digital.jpeg) no-repeat center center;
         margin-bottom: 30px;
     }
 
     #ripple-canvas-right {
-        width: 100%; /* Occupa l'intera larghezza */
-        height: 100%; /* Occupa tutta l'altezza */
+        width: 100%;
+        /* Occupa l'intera larghezza */
+        height: 100%;
+        /* Occupa tutta l'altezza */
     }
 
     .right-section {
